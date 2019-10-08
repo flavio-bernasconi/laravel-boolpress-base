@@ -109,6 +109,7 @@ h4{
             img{
               margin-top: 20px;
               border-radius: 20px;
+              filter: grayscale(90%);
             }
             p{
               padding: 0 20px 0 20px;
@@ -241,4 +242,11 @@ h4{
       justify-content: center;
     }
   }
+}
+.immagine{
+  img{
+    border-radius: 20px;
+
+  }
+
 }

@@ -10769,6 +10769,8 @@ h4 {
 .wrapper .main .wrap .link-post .links img {
   margin-top: 20px;
   border-radius: 20px;
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
 }
 
 .wrapper .main .wrap .link-post .links p {
@@ -10900,5 +10902,9 @@ h4 {
   width: 34px;
   display: grid;
   justify-content: center;
+}
+
+.immagine img {
+  border-radius: 20px;
 }
 
