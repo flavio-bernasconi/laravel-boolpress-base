@@ -10648,6 +10648,10 @@ a.text-dark:focus {
   letter-spacing: 1px;
 }
 
+*::first-letter {
+  text-transform: uppercase;
+}
+
 h1,
 h2,
 h3,
@@ -10669,33 +10673,44 @@ h4 {
   font-size: 25px;
 }
 
-.categorie {
+.wrapper {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  height: 96vh;
 }
 
-.categorie .link {
-  min-width: calc(100%/6);
+.wrapper .sidebar {
+  height: 90vh;
+  border-right: solid 3px blue;
+}
+
+.wrapper .sidebar .categorie {
+  display: grid;
+}
+
+.wrapper .sidebar .categorie .link {
+  width: calc(100%/6);
+  min-width: 260px;
   background: blue;
   padding: 20px;
   margin-right: 20px;
   margin-top: 20px;
   color: white;
+  border-radius: 10px;
   position: relative;
   transition: background 0.4s;
 }
 
-.categorie .link:hover {
+.wrapper .sidebar .categorie .link:hover {
   background: #19c98e;
   text-decoration: none;
 }
 
-.categorie .link h1 {
+.wrapper .sidebar .categorie .link h1 {
   font-size: 24px;
 }
 
-.categorie .link h1 span.num {
+.wrapper .sidebar .categorie .link h1 span.num {
   position: absolute;
   top: 0;
   right: 0;
@@ -10704,51 +10719,81 @@ h4 {
   font-weight: lighter;
   background: blue;
   border-bottom-left-radius: 30px;
+  border-top-right-radius: 10px;
 }
 
-.links {
-  display: contents;
+.wrapper .main {
+  width: 70%;
+  margin-left: 10%;
+  float: right;
+  overflow-y: auto;
+}
+
+.wrapper .main .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper .main .wrap .links {
+  display: inline-block;
   transition: background 0.5s;
   color: white;
-}
-
-.links:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.links h1 {
-  font-weight: light;
-}
-
-.links .link-post {
+  margin: 30px;
+  margin-left: 0;
   background: blue;
   padding: 40px;
-  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  min-height: 250px;
+  min-width: 350px;
 }
 
-.links .link-post:hover {
+.wrapper .main .wrap .links:hover {
+  color: white;
+  text-decoration: none;
   background: #19c98e;
 }
 
+.wrapper .main .wrap .links h4,
+.wrapper .main .wrap .links p {
+  color: white !important;
+}
+
+.wrapper .main .wrap .links h1 {
+  font-weight: light;
+}
+
 .list-post {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: contents;
   color: white;
 }
 
 .list-post .box {
   background: blue;
-  width: 45%;
+  width: 26%;
   margin: 2%;
   padding: 40px;
   transition: background 0.4s;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .list-post .box:hover {
   background: #19c98e;
   color: white;
+  text-decoration: none;
+}
+
+.list-post .box .links {
+  color: white;
+}
+
+.list-post .box .links:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .list-post .box h4 {
@@ -10796,5 +10841,30 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lista .dati {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background: blue;
+  color: white;
+  min-height: 150px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.lista .dati:hover {
+  background: #19c98e;
+}
+
+.lista .dati h5 {
+  width: 100%;
 }
 

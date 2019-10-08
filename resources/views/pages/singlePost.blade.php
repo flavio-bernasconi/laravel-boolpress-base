@@ -6,24 +6,23 @@
     <div class="col-12">
       <a href="{{ URL::previous() }}" class="mb-5">Back</a>
     </div>
-    <div class="col-6 mt-5">
-      <ul class="list-group">
-        <li  class="list-group-item">
-          <span>id: </span>
-          {{ $post -> id}}
-        </li>
-        <li class="list-group-item">
-          <span>text: </span>
-          {{ $post -> text}}
-        </li>
-        <li class="list-group-item">
-          <span>author: </span>
-          {{ $post -> author}}
-        </li>
-        <li class="list-group-item">
-          <span>created: </span>
-          {{ $post -> created_at}}
-        </li>
+    <div class="col-7 mt-5 lista">
+        <div  class="dati ">
+          <h5>id: </h5>
+          <p>{{ $post -> id}}</p>
+        </div>
+        <div class="dati">
+          <h5>author: </h5>
+          <p>{{ $post -> author}}</p>
+        </div>
+        <div class="dati">
+          <h5>created: </h5>
+          <p>{{ $post -> created_at}}</p>
+        </div>
+        <div class="dati">
+          <h5>text: </h5>
+          <p>{{ $post -> text}}</p>
+        </div>
       </ul>
     </div>
 
