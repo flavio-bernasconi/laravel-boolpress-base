@@ -1,0 +1,146 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto|Signika&display=swap');
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$static-color: blue;
+$hover-color: rgb(25, 201, 142);
+$time-transition: 0.4s;
+
+*{
+  letter-spacing: 1px;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Signika', sans-serif;
+}
+
+p, a{
+  font-family: 'Roboto', sans-serif;
+}
+p{
+  font-size: 17px;
+
+}
+h4{
+  font-size: 25px;
+}
+
+.categorie{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .link{
+    min-width: calc(100%/6);
+    background: $static-color;
+    padding: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: white;
+    position: relative;
+    transition: background $time-transition;
+    &:hover{
+      background: $hover-color;
+      text-decoration: none;
+    }
+    h1{
+      font-size: 24px;
+      span.num{
+        position: absolute;
+        top: 0;
+        right:0;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: lighter;
+        background: $static-color;
+        border-bottom-left-radius: 30px;
+      }
+    }
+  }
+}
+
+.links{
+    display: contents;
+    transition: background 0.5s;
+    color: white;
+    &:hover{
+      color: white;
+      text-decoration: none;
+    }
+    h1{
+      font-weight: light;
+    }
+    .link-post{
+      background: $static-color;
+      padding: 40px;
+      color: white;
+      &:hover{
+        background: $hover-color;
+      }
+  }
+
+}
+
+.list-post{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: white;
+  .box{
+    background: $static-color;
+    width: 45%;
+    margin: 2%;
+    padding: 40px;
+    transition: background $time-transition;
+    &:hover{
+      background: $hover-color;
+      color: white;
+    }
+    h4{
+      font-weight: normal;
+    }
+    .btn-edit{
+      background: white;
+      padding:6px 20px;
+      display: inline-block;
+      margin-right: 20px;
+      border-radius: 15px;
+    }
+    .btn-delete{
+      color: white;
+    }
+  }
+}
+
+
+.testo{
+  height: 300px;
+}
+.title{
+  font-size: 4rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: rgb(168, 168, 168);
+}
+
+.category-title{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+
+  .num-post{
+    margin-left: 20px;
+    height: 40px;
+    width: 40px;
+    font-weight: bolder;
+    font-size: 16px;
+    background: $static-color;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
