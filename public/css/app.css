@@ -10720,6 +10720,7 @@ h4 {
   background: #3d64ff;
   border-bottom-left-radius: 30px;
   border-top-right-radius: 10px;
+  box-shadow: -2px 2px 7px #2447d0;
 }
 
 .wrapper .sidebar .btn-create {
@@ -10877,5 +10878,16 @@ h4 {
 
 .lista .dati h5 {
   width: 100%;
+}
+
+.pagination .page-item .page-link {
+  background: transparent;
+  margin: 10px;
+  color: #3d64ff;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  display: grid;
+  justify-content: center;
 }
 

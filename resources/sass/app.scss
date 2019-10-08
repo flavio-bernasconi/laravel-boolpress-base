@@ -68,6 +68,7 @@ h4{
             background: $static-color;
             border-bottom-left-radius: 30px;
             border-top-right-radius: 10px;
+            box-shadow: -2px 2px 7px rgb(36, 71, 208);
           }
         }
       }
@@ -214,6 +215,21 @@ h4{
     }
     h5{
       width: 100%;
+    }
+  }
+}
+
+.pagination{
+  .page-item{
+    .page-link{
+      background: transparent;
+      margin:10px;
+      color: $static-color;
+      border-radius: 50%;
+      height: 34px;
+      width:34px;
+      display: grid;
+      justify-content: center;
     }
   }
 }

@@ -42,8 +42,11 @@
                     </a>
                 </div>
             @endforeach
+
           </div>
-          {{ $posts -> links()}}
+          <div class="col-12 mt-4">
+            {{ $posts -> links()}}
+          </div>
         </div>
       </div>
   </body>

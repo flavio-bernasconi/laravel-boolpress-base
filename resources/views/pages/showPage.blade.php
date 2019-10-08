@@ -24,7 +24,13 @@
         <div class="box pt-5 pb-5 shadow">
           <a href="{{ route('showSinglePost', $post -> id )}}" class="links">
             <h4>{{$post ->author }}</h4>
-            <p>{{$post ->text }}</p>
+            <p>
+              @php
+                if (strlen($post ->text) > 90 )
+                  echo substr($post ->text , 0,70) . ' ...' ;
+              @endphp
+              {{-- {{$post ->text }} --}}
+            </p>
           </a>
             <a href="{{ route('editSinglePost', $post -> id )}}" class="btn-edit">Edit</a>
             <a href="{{ route('deleteSinglePost', $post -> id )}}" class="btn-delete">Delete</a>
