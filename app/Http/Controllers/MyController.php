@@ -16,10 +16,10 @@ class MyController extends Controller
     public function index()
     {
         $categories = Category::all();
-
-        $posts = Post::orderBy('created_at','desc')
-                  ->take(5)
-                  ->get();
+        $posts = Post::orderBy('created_at', 'desc')->paginate(6);
+        // $posts = Post::orderBy('created_at','desc')
+        //           ->take(8)
+        //           ->get();
 
 
         return view('pages.home')
@@ -74,6 +74,7 @@ class MyController extends Controller
     public function show($id)
     {
         $category = Category::findOrFail($id);
+
         // dd($category);
         return view('pages.showPage', compact('category'));
     }

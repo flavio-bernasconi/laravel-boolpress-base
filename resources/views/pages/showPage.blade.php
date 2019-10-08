@@ -29,7 +29,6 @@
             <a href="{{ route('editSinglePost', $post -> id )}}" class="btn-edit">Edit</a>
             <a href="{{ route('deleteSinglePost', $post -> id )}}" class="btn-delete">Delete</a>
         </div>
-
     @endforeach
   </div>
 </div>
