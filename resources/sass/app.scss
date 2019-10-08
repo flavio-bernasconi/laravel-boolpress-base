@@ -82,41 +82,48 @@ h4{
     }
   }
   .main{
-    width:70%;
-    margin-left: 10%;
+    width:80%;
+    margin-left: 5%;
     float: right;
     overflow-y: auto;
     .wrap{
       display: flex;
       flex-wrap: wrap;
-      .links{
-          display: inline-block;
-          transition: background 0.5s;
-          color: white;
-          margin: 30px;
-          margin-left: 0;
-          background: $static-color;
-          padding: 40px;
-          border-radius: 20px;
-          text-decoration: none;
-          min-height: 250px;
-          min-width: 350px;
-          transition: transform 0.4s;
-          &:hover{
+      .link-post{
+        width: 33%;
+        .links{
+            display: inline-block;
+            transition: background 0.5s;
             color: white;
+            background: $static-color;
+            border-radius: 20px;
             text-decoration: none;
-            background: $hover-color;
-            transform: translateY(-10px);
+            transition: transform 0.4s;
+            margin: 15px;
+            &:hover{
+              color: white;
+              text-decoration: none;
+              background: $hover-color;
+              transform: translateY(-10px);
+            }
+            img{
+              margin-top: 20px;
+              border-radius: 20px;
+            }
+            p{
+              padding: 0 20px 0 20px;
+              color: white!important;
+            }
+            h3{
+              padding: 30px 20px 0 20px;
+              color: white!important;
+            }
+            h1{
+              font-weight: light;
+            }
           }
-          h4,p{
-            color: white!important;
-          }
-          h1{
-            font-weight: light;
-          }
-        }
+      }
     }
-
   }
 }
 
@@ -144,6 +151,8 @@ h4{
     }
     .links{
       color: white;
+      width:100%;
+
       &:hover{
         color: white;
         text-decoration: none;

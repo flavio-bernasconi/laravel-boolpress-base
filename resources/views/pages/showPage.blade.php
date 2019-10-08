@@ -4,7 +4,7 @@
 @section('content')
 
   <div class="row">
-    <a href="{{ route('start') }}" class="mb-5">Back</a>
+    <a href="{{ route('start') }}" class="mb-5"><i class="fas fa-chevron-left"></i>Back</a>
 
   </div>
   <div class="row">
@@ -25,11 +25,11 @@
           <a href="{{ route('showSinglePost', $post -> id )}}" class="links">
             <h4>{{$post ->author }}</h4>
             <p>
-              @php
-                if (strlen($post ->text) > 90 )
-                  echo substr($post ->text , 0,70) . ' ...' ;
-              @endphp
-              {{-- {{$post ->text }} --}}
+              @if(strlen($post ->text) > 90)
+                {{substr($post ->text , 0,70) . ' ...'}}
+              @else
+                  {{$post ->text }}
+              @endif
             </p>
           </a>
             <a href="{{ route('editSinglePost', $post -> id )}}" class="btn-edit">Edit</a>

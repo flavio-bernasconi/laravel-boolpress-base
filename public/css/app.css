@@ -10733,8 +10733,8 @@ h4 {
 }
 
 .wrapper .main {
-  width: 70%;
-  margin-left: 10%;
+  width: 80%;
+  margin-left: 5%;
   float: right;
   overflow-y: auto;
 }
@@ -10744,34 +10744,44 @@ h4 {
   flex-wrap: wrap;
 }
 
-.wrapper .main .wrap .links {
+.wrapper .main .wrap .link-post {
+  width: 33%;
+}
+
+.wrapper .main .wrap .link-post .links {
   display: inline-block;
   transition: background 0.5s;
   color: white;
-  margin: 30px;
-  margin-left: 0;
   background: #3d64ff;
-  padding: 40px;
   border-radius: 20px;
   text-decoration: none;
-  min-height: 250px;
-  min-width: 350px;
   transition: transform 0.4s;
+  margin: 15px;
 }
 
-.wrapper .main .wrap .links:hover {
+.wrapper .main .wrap .link-post .links:hover {
   color: white;
   text-decoration: none;
   background: #19c98e;
   transform: translateY(-10px);
 }
 
-.wrapper .main .wrap .links h4,
-.wrapper .main .wrap .links p {
+.wrapper .main .wrap .link-post .links img {
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.wrapper .main .wrap .link-post .links p {
+  padding: 0 20px 0 20px;
   color: white !important;
 }
 
-.wrapper .main .wrap .links h1 {
+.wrapper .main .wrap .link-post .links h3 {
+  padding: 30px 20px 0 20px;
+  color: white !important;
+}
+
+.wrapper .main .wrap .link-post .links h1 {
   font-weight: light;
 }
 
@@ -10801,6 +10811,7 @@ h4 {
 
 .list-post .box .links {
   color: white;
+  width: 100%;
 }
 
 .list-post .box .links:hover {
