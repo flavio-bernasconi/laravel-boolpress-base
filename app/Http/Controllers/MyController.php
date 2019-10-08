@@ -58,8 +58,9 @@ class MyController extends Controller
         $validatedData = $request -> validate([
           'author' => 'required',
           'text'=> 'required',
+          'category_id'=> 'required'
         ]);
-        dd($validatedData);
+        // dd($validatedData);
         $newPost = Post::create($validatedData);
         return redirect('/');
     }
