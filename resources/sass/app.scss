@@ -6,7 +6,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-$static-color: blue;
+$static-color: rgb(61, 100, 255);
 $hover-color: rgb(25, 201, 142);
 $time-transition: 0.4s;
 
@@ -56,8 +56,8 @@ h4{
           background: $hover-color;
           text-decoration: none;
         }
-        h1{
-          font-size: 24px;
+        h5{
+          font-size: 18px;
           span.num{
             position: absolute;
             top: 0;
@@ -70,6 +70,13 @@ h4{
             border-top-right-radius: 10px;
           }
         }
+      }
+    }
+    .btn-create{
+      color: $static-color;
+      font-size: 18px;
+      i{
+        margin-left: 15px;
       }
     }
   }

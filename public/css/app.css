@@ -10681,7 +10681,7 @@ h4 {
 
 .wrapper .sidebar {
   height: 90vh;
-  border-right: solid 3px blue;
+  border-right: solid 3px #3d64ff;
 }
 
 .wrapper .sidebar .categorie {
@@ -10691,7 +10691,7 @@ h4 {
 .wrapper .sidebar .categorie .link {
   width: calc(100%/6);
   min-width: 260px;
-  background: blue;
+  background: #3d64ff;
   padding: 20px;
   margin-right: 20px;
   margin-top: 20px;
@@ -10706,20 +10706,29 @@ h4 {
   text-decoration: none;
 }
 
-.wrapper .sidebar .categorie .link h1 {
-  font-size: 24px;
+.wrapper .sidebar .categorie .link h5 {
+  font-size: 18px;
 }
 
-.wrapper .sidebar .categorie .link h1 span.num {
+.wrapper .sidebar .categorie .link h5 span.num {
   position: absolute;
   top: 0;
   right: 0;
   padding: 10px;
   font-size: 15px;
   font-weight: lighter;
-  background: blue;
+  background: #3d64ff;
   border-bottom-left-radius: 30px;
   border-top-right-radius: 10px;
+}
+
+.wrapper .sidebar .btn-create {
+  color: #3d64ff;
+  font-size: 18px;
+}
+
+.wrapper .sidebar .btn-create i {
+  margin-left: 15px;
 }
 
 .wrapper .main {
@@ -10740,7 +10749,7 @@ h4 {
   color: white;
   margin: 30px;
   margin-left: 0;
-  background: blue;
+  background: #3d64ff;
   padding: 40px;
   border-radius: 20px;
   text-decoration: none;
@@ -10769,7 +10778,7 @@ h4 {
 }
 
 .list-post .box {
-  background: blue;
+  background: #3d64ff;
   width: 26%;
   margin: 2%;
   padding: 40px;
@@ -10835,7 +10844,7 @@ h4 {
   width: 40px;
   font-weight: bolder;
   font-size: 16px;
-  background: blue;
+  background: #3d64ff;
   color: white;
   border-radius: 50px;
   display: flex;
@@ -10852,7 +10861,7 @@ h4 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  background: blue;
+  background: #3d64ff;
   color: white;
   min-height: 150px;
   padding: 20px;

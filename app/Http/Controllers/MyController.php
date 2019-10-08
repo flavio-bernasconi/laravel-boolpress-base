@@ -77,11 +77,15 @@ class MyController extends Controller
         // dd($category);
         return view('pages.showPage', compact('category'));
     }
+
     public function showSinglePost($id)
     {
         $post = Post::findOrFail($id);
+        $categories = Category::all();
         // dd($post);
-        return view('pages.singlePost', compact('post'));
+        return view('pages.singlePost')
+                ->with('categories',$categories)
+                ->with('post', $post);
     }
 
     /**
