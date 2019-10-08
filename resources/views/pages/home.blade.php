@@ -11,7 +11,7 @@
 
         <div class="sidebar">
           <div class="col-12">
-              <h1 class="">Categories</h1>
+              <h3 class="">Categories</h3>
           </div>
           <div class="col-12 categorie">
             @foreach ($categories as $category)
@@ -32,7 +32,7 @@
         </div>
 
         <div class="row  main">
-          <h1 class="title">Latest Post</h1>
+          <h3>Latest Post</h3>
           <div class="col-12 wrap">
             @foreach ($posts as $post)
                 <div class="link-post">
