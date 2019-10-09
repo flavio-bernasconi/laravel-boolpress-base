@@ -29,6 +29,19 @@
           <div class="col-12 mt-5">
             <a href="{{route('createPost')}}" class="btn-create">Create Post<i class="fas fa-plus-circle"></i></a>
           </div>
+          <div class="col-12 mt-5 categorie">
+            @foreach ($tags as $tag)
+              <a href="{{ route('showPost',$category -> id)}}" class="link">
+                <h5>{{$tag -> name}}
+                  <span class="num">
+                    @php
+                      echo count($tag -> posts)
+                    @endphp
+                  </span>
+                </h5>
+              </a>
+            @endforeach
+          </div>
         </div>
 
         <div class="row  main">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Post;
+use App\Tag;
 
 class MyController extends Controller
 {
@@ -16,6 +17,7 @@ class MyController extends Controller
     public function index()
     {
         $categories = Category::all();
+        $tags = Tag::all();
         $posts = Post::orderBy('created_at', 'desc')->paginate(6);
         // $posts = Post::orderBy('created_at','desc')
         //           ->take(8)
@@ -24,6 +26,7 @@ class MyController extends Controller
 
         return view('pages.home')
                 ->with('categories',$categories)
+                ->with('tags',$tags)
                 ->with('posts', $posts);
 
 
