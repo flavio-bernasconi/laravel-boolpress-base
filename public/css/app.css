@@ -10682,6 +10682,7 @@ h4 {
 .wrapper .sidebar {
   height: 90vh;
   border-right: solid 3px #3d64ff;
+  overflow-y: scroll;
 }
 
 .wrapper .sidebar .categorie {

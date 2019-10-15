@@ -21,6 +21,10 @@
               {{ $category -> name }}
             @endif
           @endforeach
+           <h5>tags</h5>
+           @foreach ($post -> tags as $tag)
+             {{ $tag -> name}}
+           @endforeach
         </div>
     </div>
     <div class="col-3 mt-5 ">
@@ -33,7 +37,7 @@
   </div>
   <div class="row justify-content-center ">
     <div class="col-5 mt-5 justify-content-center immagine">
-        <img src="{{$post -> img}}" alt="" class="img-fluid shadow">
+      <img src="img/{{$post -> img}}" alt="" class="img-fluid shadow">
     </div>
   </div>
 

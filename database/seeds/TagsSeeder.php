@@ -13,7 +13,7 @@ class TagsSeeder extends Seeder
      */
     public function run()
     {
-      factory(Tag::class, 20)
+      factory(Tag::class, 8)
               -> create()
               -> each(function($tag) {
 

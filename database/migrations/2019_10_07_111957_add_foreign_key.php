@@ -51,7 +51,7 @@ class AddForeignKey extends Migration
         $table -> dropForeign('relationPostsTags');
         $table -> dropColumn('post_id');
 
-        $table -> dropForeign('relationTagsPosts');
+        $table -> dropForeign('relationTags-Posts');
         $table -> dropColumn('tag_id');
       });
     }

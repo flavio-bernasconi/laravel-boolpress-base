@@ -8,6 +8,6 @@ use App\Tag;
 
 $factory->define(Tag::class, function (Faker $faker) {
     return [
-        'name' => $faker->unique()->word,
+        'name' => $faker->unique()->colorName,
     ];
 });

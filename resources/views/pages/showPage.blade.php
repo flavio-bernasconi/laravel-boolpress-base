@@ -5,7 +5,6 @@
 
   <div class="row">
     <a href="{{ route('start') }}" class="mb-5"><i class="fas fa-chevron-left"></i>Back</a>
-
   </div>
   <div class="row">
     <div class="lg-12 category-title">
@@ -31,6 +30,7 @@
                   {{$post ->text }}
               @endif
             </p>
+            <p>  {{$post ->id }}</p>
           </a>
             <a href="{{ route('editSinglePost', $post -> id )}}" class="btn-edit">Edit</a>
             <a href="{{ route('deleteSinglePost', $post -> id )}}" class="btn-delete">Delete</a>

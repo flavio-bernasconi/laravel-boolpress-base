@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\PostRequest;
+
+use App\Mail\PostMail;
+
 use Illuminate\Http\Request;
 use App\Category;
 use App\Post;
@@ -19,21 +24,16 @@ class MyController extends Controller
         $categories = Category::all();
         $tags = Tag::all();
         $posts = Post::orderBy('created_at', 'desc')->paginate(6);
+
         // $posts = Post::orderBy('created_at','desc')
         //           ->take(8)
         //           ->get();
-
 
         return view('pages.home')
                 ->with('categories',$categories)
                 ->with('tags',$tags)
                 ->with('posts', $posts);
 
-
-    }
-
-    public function getFivePost()
-    {
 
     }
 
@@ -86,10 +86,21 @@ class MyController extends Controller
     {
         $post = Post::findOrFail($id);
         $categories = Category::all();
+        $tags =Tag::all();
+        // dd($post -> tags);
         // dd($post);
         return view('pages.singlePost')
                 ->with('categories',$categories)
+                ->with('tags',$tags)
                 ->with('post', $post);
+    }
+
+    public function showByTag($id)
+    {
+        $tag= Tag::findOrFail($id);
+
+        return view('pages.singleTag', compact('tag'));
+
     }
 
     /**
@@ -111,16 +122,28 @@ class MyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
-      $validatedData = $request -> validate([
-        'author' => 'required',
-        'text'=> 'required'
-      ]);
-      // dd($validatedData);
-      $newPost = Post::whereId($id)->update($validatedData);
+      $validatedData = $request -> validated();
+      $post = Post::findOrFail($id);
+
+      $file = $request -> file('img');
+      if ($file) {
+
+        $folder = 'img';
+        $nameImg = 'post-' . $id . '.' . $file -> getClientOriginalExtension();
+
+        $file -> move($folder, $nameImg);
+        $validatedData['img'] = $nameImg;
+
+      }
+
+      $post -> Update($validatedData);
+
+      Mail::to("test@mail.it")->send(new PostMail($post));
+
+
       return redirect('/');
-      // return  redirect()->back();
     }
 
     /**

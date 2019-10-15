@@ -39,6 +39,8 @@ h4{
   .sidebar{
     height: 90vh;
     border-right: solid 3px $static-color;
+    overflow-y: scroll;
+
     .categorie{
       display: grid;
       .link{

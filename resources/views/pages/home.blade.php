@@ -30,8 +30,11 @@
             <a href="{{route('createPost')}}" class="btn-create">Create Post<i class="fas fa-plus-circle"></i></a>
           </div>
           <div class="col-12 mt-5 categorie">
+            <div class="col-12">
+                <h3 class="">tags</h3>
+            </div>
             @foreach ($tags as $tag)
-              <a href="{{ route('showPost',$category -> id)}}" class="link">
+              <a href="{{ route('showTag',$tag -> id)}}" class="link">
                 <h5>{{$tag -> name}}
                   <span class="num">
                     @php
@@ -44,6 +47,7 @@
           </div>
         </div>
 
+        {{-- //body content --}}
         <div class="row  main">
           <h3>Latest Post</h3>
           <div class="col-12 wrap">
@@ -52,11 +56,10 @@
                   <a href="{{ route('showSinglePost', $post -> id )}}" class="links shadow">
                       <h3>{{$post -> author}}</h3>
                       <p>{{$post -> created_at}}</p>
-                      <img src="{{$post -> img}}" alt="" class="img-fluid shadow">
+                      <img src="img/{{$post -> img}}" alt="" class="img-fluid shadow">
                   </a>
                 </div>
             @endforeach
-
           </div>
           <div class="col-12 mt-4">
             {{ $posts -> links()}}
