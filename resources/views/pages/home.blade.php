@@ -56,7 +56,7 @@
                   <a href="{{ route('showSinglePost', $post -> id )}}" class="links shadow">
                       <h3>{{$post -> author}}</h3>
                       <p>{{$post -> created_at}}</p>
-                      <img src="img/{{$post -> img}}" alt="" class="img-fluid shadow">
+                      <img src="http://localhost/img/{{$post -> img}}" alt="" class="img-fluid shadow">
                   </a>
                 </div>
             @endforeach

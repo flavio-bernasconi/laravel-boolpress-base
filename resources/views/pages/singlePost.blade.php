@@ -37,7 +37,7 @@
   </div>
   <div class="row justify-content-center ">
     <div class="col-5 mt-5 justify-content-center immagine">
-      <img src="img/{{$post -> img}}" alt="" class="img-fluid shadow">
+      <img src="http://localhost/img/{{$post -> img}}" alt="" class="img-fluid shadow">
     </div>
   </div>
 
